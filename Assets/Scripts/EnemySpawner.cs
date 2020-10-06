@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-	[SerializeField] WaveConfig wave;
+	//[SerializeField] WaveConfig wave;
+	[SerializeField] List<WaveConfig> waves;
 	[SerializeField] Transform target;
+
+	//find it's purpose!!
+	public bool hasStarted = true;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		StartCoroutine(SpawnAllEnemiesInWave(wave));
-	}
-
-	private IEnumerator SpawnAllEnemiesInWave(WaveConfig wave)
-	{
-		for (int enemyCount = 0; enemyCount < wave.NumberOfEnemies(); enemyCount++)
-		{
-			Instantiate(wave.GetEnemyPrefab(), transform.position, Quaternion.identity);
-			yield return new WaitForSeconds(wave.TimeBetweenSpawn());
-		}
+		StartCoroutine(SpawnAllWaves());
 	}
 
 	public Transform GetTarget()
@@ -27,4 +22,23 @@ public class EnemySpawner : MonoBehaviour
 		return target;
 	}
 
+	//spawns all the waves in the List
+	IEnumerator SpawnAllWaves()
+	{
+		for(int i = 0;  i < waves.Count; i++)
+		{
+			var currentWave = waves[i];
+			yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+		}
+	}
+
+	IEnumerator SpawnAllEnemiesInWave(WaveConfig wave)
+	{
+		
+		for (int enemyCount = 0; enemyCount < wave.NumberOfEnemies(); enemyCount++)
+		{
+			Instantiate(wave.GetEnemyPrefab(), transform.position, Quaternion.identity);
+			yield return new WaitForSeconds(wave.TimeBetweenSpawn());
+		}
+	}
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class WaveConfig : ScriptableObject
 {
 	[SerializeField] GameObject enemyPrefab;
-	[SerializeField] float numberOfEnemies;
+	[SerializeField] int numberOfEnemies;
 	[SerializeField] float timeBetweenSpawns;
 	
 
@@ -15,7 +15,7 @@ public class WaveConfig : ScriptableObject
 		return enemyPrefab;
 	}
 
-	public float NumberOfEnemies()
+	public int NumberOfEnemies()
 	{
 		return numberOfEnemies;
 	}

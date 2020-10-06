@@ -11,17 +11,15 @@ public class LevelController : MonoBehaviour
 	[SerializeField] Text goldPoints;
 	[SerializeField] Text lifePoints;
 
+	//remove or change
+	EnemySpawner enemySpawner;
 
 	bool hasLost = false;
+	bool hasWon = false;
 
 	private void Awake()
 	{
-
-	}
-
-	private void Start()
-	{
-		
+		enemySpawner = FindObjectOfType<EnemySpawner>();
 	}
 
 	// Update is called once per frame
@@ -30,13 +28,17 @@ public class LevelController : MonoBehaviour
 		goldPoints.text = gold.ToString();
 		lifePoints.text = lives.ToString(); //FIX THIS
 
-		if (hasLost)
-		{
-
-			//Time.timeScale = 0f;
-		}
 		CheckIfLost();
+		CheckIfWon();
 
+	}
+
+	private void CheckIfWon()
+	{
+		if (FindObjectsOfType<Health>().Length <= 0 && enemySpawner!=null)
+		{
+			//Win
+		}
 	}
 
 	private void LoseLifePoint()
@@ -49,6 +51,7 @@ public class LevelController : MonoBehaviour
 		if (lives <= 0)
 		{
 			hasLost = true;
+			//Lose
 		}
 	}
 

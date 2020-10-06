@@ -38,6 +38,7 @@ public class TowerArcher : MonoBehaviour
 		if (distance <= range)
 		{
 			var lookPos = enemy.transform.position - transform.position;
+			
 			lookPos.y = 0;
 			var rotation = Quaternion.LookRotation(lookPos);
 			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 1f);
