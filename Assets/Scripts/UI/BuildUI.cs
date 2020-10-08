@@ -3,33 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BuildUI : MonoBehaviour
+public class BuildUi : MonoBehaviour
 {
-	[SerializeField] LayerMask towerMask;
+	Image buildImage;
 
-	private void Update()
+	private void Awake()
 	{
-		if(Input.GetMouseButtonDown(1))
+		buildImage = GetComponent<Image>();
+		buildImage.enabled = false;
+	}
+
+	public void ActivateOnlyOneUiElement()
+	{
+		BuildUi[] buidUiObjects = FindObjectsOfType<BuildUi>();
+		foreach(BuildUi uiElement in buidUiObjects)
 		{
-			RaycastHit hit;
-			bool hasHit = Physics.Raycast(GetMouseRay(), out hit, towerMask);
-			if (hasHit)
+			if(this != uiElement)
 			{
-	
+				uiElement.GetBuildUiImage().enabled = false;
 			}
-			
+			else
+			{
+				uiElement.GetBuildUiImage().enabled = true;
+			}
 		}
 	}
 
-	private Ray GetMouseRay()
+	public Image GetBuildUiImage()
 	{
-		return Camera.main.ScreenPointToRay(MousePos());
+		return buildImage;
 	}
-
-	private Vector3 MousePos()
-	{
-		return Input.mousePosition;
-	}
-
-
 }
