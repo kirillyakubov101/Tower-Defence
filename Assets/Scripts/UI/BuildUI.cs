@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class BuildUi : MonoBehaviour
 {
-	Image buildImage;
+	[SerializeField] Image buildImage;
 
+	
 	private void Awake()
 	{
-		buildImage = GetComponent<Image>();
 		buildImage.enabled = false;
 	}
+
 
 	public void ActivateOnlyOneUiElement()
 	{
@@ -29,8 +30,10 @@ public class BuildUi : MonoBehaviour
 		}
 	}
 
-	public Image GetBuildUiImage()
+	private Image GetBuildUiImage()
 	{
 		return buildImage;
 	}
+
+	
 }

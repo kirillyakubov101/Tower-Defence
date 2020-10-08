@@ -37,6 +37,14 @@ public class EmpySlot : MonoBehaviour
 
 	//on mouse leave/click somewhere else, need to disable it
 
-
+	public void BuildArcherTower()
+	{
+		if (levelController.GetGoldAmount() >= towerPrice)
+		{
+			levelController.PayForTower(towerPrice);
+			Instantiate(tower, newTowerPos, transform.rotation);
+			Destroy(transform.parent.gameObject);
+		}
+	}
 
 }
