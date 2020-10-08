@@ -57,5 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b346c845c3e8346adb53161c1c3eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 1
+  lives: 20
   gold: 100
+  goldPoints: {fileID: 0}
+  lifePoints: {fileID: 0}

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Tower.cs" />
     <Compile Include="Assets\Scripts\TowerArcher.cs" />
+    <Compile Include="Assets\Scripts\UI\BuildUI.cs" />
     <Compile Include="Assets\Scripts\WaveConfig.cs" />
     <None Include="Assets\Asset Packs\Packges\SimpleLowPolyNature\Readme.txt" />
     <None Include="Assets\Asset Packs\Packges\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
