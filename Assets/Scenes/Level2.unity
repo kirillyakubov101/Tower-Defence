@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 890696979fa9d8245b41b8379512fb72,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -985,6 +986,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5020802381777922252, guid: 629cbea126a9bdb42be3f54eaf23c902,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020802381777922252, guid: 629cbea126a9bdb42be3f54eaf23c902,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9762946
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020802381777922252, guid: 629cbea126a9bdb42be3f54eaf23c902,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020802381777922252, guid: 629cbea126a9bdb42be3f54eaf23c902,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.21644594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020802381777922252, guid: 629cbea126a9bdb42be3f54eaf23c902,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 205.00099
+      objectReference: {fileID: 0}
     - target: {fileID: 5359661685325199252, guid: 629cbea126a9bdb42be3f54eaf23c902,
         type: 3}
       propertyPath: m_Name
@@ -1918,36 +1944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8177499141390911182, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 81.380005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499141390911182, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13.819946
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499141390911182, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 169.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499141390911182, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 52.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499141390911183, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499141390911183, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 46
-      objectReference: {fileID: 0}
     - target: {fileID: 8177499142794900376, guid: ec139c741ba52a74f87b92e90bb24a4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2057,46 +2053,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499142794900452, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499142794900455, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609987, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 81.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609987, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 169.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609987, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -77.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609987, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 52.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609988, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177499143017609988, guid: ec139c741ba52a74f87b92e90bb24a4d,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec139c741ba52a74f87b92e90bb24a4d, type: 3}

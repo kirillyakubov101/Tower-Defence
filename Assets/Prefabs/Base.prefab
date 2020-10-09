@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab347680b6a98544aaab13e76a5df161, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4cf199df10822f4dbb5de4aebac33eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -321,6 +321,11 @@ PrefabInstance:
       propertyPath: buildUI
       value: 
       objectReference: {fileID: 6168727390451544531}
+    - target: {fileID: 786449515015817468, guid: b52e975f9e29f5c47935929177efe6e4,
+        type: 3}
+      propertyPath: flagMat
+      value: 
+      objectReference: {fileID: 8928352716561329928}
     - target: {fileID: 1424859359852299570, guid: b52e975f9e29f5c47935929177efe6e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -381,6 +386,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: body
       objectReference: {fileID: 0}
+    - target: {fileID: 4495490449466549127, guid: b52e975f9e29f5c47935929177efe6e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495490449466549127, guid: b52e975f9e29f5c47935929177efe6e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52e975f9e29f5c47935929177efe6e4, type: 3}
 --- !u!4 &5020802381777922252 stripped
@@ -401,3 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0e19e57392f9c40ad303e4e5a3690d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!137 &8928352716561329928 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3282145967530689270, guid: b52e975f9e29f5c47935929177efe6e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6227184313745403390}
+  m_PrefabAsset: {fileID: 0}
