@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
 		aiController.StopAgent();
 		deathCoins.Play();
 		levelController.GainGold(goldAmount);
-		Destroy(gameObject,1.5f);
+		Destroy(gameObject,1f);
 		
 	}
 }
