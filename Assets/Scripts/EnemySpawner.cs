@@ -37,7 +37,8 @@ public class EnemySpawner : MonoBehaviour
 		
 		for (int enemyCount = 0; enemyCount < wave.NumberOfEnemies(); enemyCount++)
 		{
-			Instantiate(wave.GetEnemyPrefab(), transform.position, Quaternion.identity);
+			var newEnemy = Instantiate(wave.GetEnemyPrefab(), transform.position, Quaternion.identity);
+			newEnemy.transform.parent = transform;
 			yield return new WaitForSeconds(wave.TimeBetweenSpawn());
 		}
 	}

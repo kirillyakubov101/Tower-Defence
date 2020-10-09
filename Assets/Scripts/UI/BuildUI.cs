@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BuildUi : MonoBehaviour
 {
 	[SerializeField] Image buildImage;
+	
 
 	
 	private void Awake()

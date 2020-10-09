@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 418746405794826810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2544234218905010871}
   m_RootOrder: 0
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 2532285170422879976}
   - component: {fileID: 5152325521494541062}
   - component: {fileID: 1846226779703229470}
+  - component: {fileID: 4318680828297115162}
   m_Layer: 9
   m_Name: Build Canvas
   m_TagString: Untagged
@@ -227,6 +228,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &4318680828297115162
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314892791069564883}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed36c6cba8ba13c4e90444ef9f7857ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5359661685325199252
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildImage: {fileID: 4963196940491880096}
+  animator: {fileID: 0}
 --- !u!1001 &6227184313745403390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -326,6 +347,11 @@ PrefabInstance:
       propertyPath: flagMat
       value: 
       objectReference: {fileID: 8928352716561329928}
+    - target: {fileID: 786449515015817468, guid: b52e975f9e29f5c47935929177efe6e4,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4318680828297115162}
     - target: {fileID: 1424859359852299570, guid: b52e975f9e29f5c47935929177efe6e4,
         type: 3}
       propertyPath: m_LocalPosition.x

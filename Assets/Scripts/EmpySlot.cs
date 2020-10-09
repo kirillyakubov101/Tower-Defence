@@ -10,6 +10,7 @@ public class EmpySlot : MonoBehaviour
 	[SerializeField] int towerPrice = 100;
 	[Header("UI")]
 	[SerializeField] BuildUi buildUI;
+	[SerializeField] Animator animator;
 	[Header("Flag")]
 	[SerializeField] Renderer flagMat;
 
@@ -44,19 +45,14 @@ public class EmpySlot : MonoBehaviour
 	private void OnMouseUpAsButton() //Make tower
 	{
 		buildUI.ActivateOnlyOneUiElement();
-		/*if(levelController.GetGoldAmount() >= towerPrice)
-		{
-			levelController.PayForTower(towerPrice);
-			Instantiate(tower, newTowerPos, transform.rotation);
-			Destroy(gameObject);
-		}*/
-
+		animator.SetTrigger("appear");
 	}
 
 	//on mouse leave/click somewhere else, need to disable it
 
 	public void BuildArcherTower()
 	{
+		
 		if (levelController.GetGoldAmount() >= towerPrice)
 		{
 			levelController.PayForTower(towerPrice);
@@ -64,5 +60,6 @@ public class EmpySlot : MonoBehaviour
 			Destroy(transform.parent.gameObject);
 		}
 	}
+
 
 }

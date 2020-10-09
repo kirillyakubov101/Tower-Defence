@@ -21,4 +21,9 @@ public class AiController : MonoBehaviour
 		meshAgent.destination = enemySpawner.GetTarget().position;
 
 	}
+
+	public void StopAgent()
+	{
+		meshAgent.isStopped = true;
+	}
 }
