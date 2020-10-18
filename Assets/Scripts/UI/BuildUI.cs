@@ -3,38 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BuildUi : MonoBehaviour
+namespace TowerDefence.UI
 {
-	[SerializeField] Image buildImage;
-	
-
-	
-	private void Awake()
+	public class BuildUi : MonoBehaviour
 	{
-		buildImage.enabled = false;
-	}
+		[SerializeField] Image buildImage;
+		[SerializeField] GameObject ghostTower;
+		[SerializeField] GameObject flag;
 
-
-	public void ActivateOnlyOneUiElement()
-	{
-		BuildUi[] buidUiObjects = FindObjectsOfType<BuildUi>();
-		foreach(BuildUi uiElement in buidUiObjects)
+		private void Awake()
 		{
-			if(this != uiElement)
+			buildImage.enabled = false;
+			ghostTower.SetActive(false);
+		}
+
+
+		public void ActivateOnlyOneUiElement()
+		{
+			BuildUi[] buidUiObjects = FindObjectsOfType<BuildUi>();
+			foreach (BuildUi uiElement in buidUiObjects)
 			{
-				uiElement.GetBuildUiImage().enabled = false;
-			}
-			else
-			{
-				uiElement.GetBuildUiImage().enabled = true;
+				if (this != uiElement)
+				{
+					uiElement.GetBuildUiImage().enabled = false;
+					uiElement.ghostTower.SetActive(false);
+					uiElement.flag.SetActive(true);
+
+
+				}
+				else
+				{
+					uiElement.GetBuildUiImage().enabled = true;
+					uiElement.ghostTower.SetActive(true);
+					uiElement.flag.SetActive(false);
+				}
 			}
 		}
-	}
 
-	private Image GetBuildUiImage()
-	{
-		return buildImage;
-	}
+		private Image GetBuildUiImage()
+		{
+			return buildImage;
+		}
 
-	
+		public static void DisableAll()
+		{
+			var allBuildUi = FindObjectsOfType<BuildUi>();
+			foreach (BuildUi uiElement in allBuildUi)
+			{
+				uiElement.GetBuildUiImage().enabled = false;
+				uiElement.ghostTower.SetActive(false);
+				uiElement.flag.SetActive(true);
+			}
+		}
+
+	}
 }
+
