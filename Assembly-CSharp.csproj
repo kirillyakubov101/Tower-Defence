@@ -63,18 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Ai\AiController.cs" />
-    <Compile Include="Assets\Scripts\Ai\Health.cs" />
-    <Compile Include="Assets\Scripts\Ai\WaveConfig.cs" />
-    <Compile Include="Assets\Scripts\Core\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Core\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Core\GameSession.cs" />
-    <Compile Include="Assets\Scripts\Core\LevelController.cs" />
-    <Compile Include="Assets\Scripts\Projectile\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Towers\EmpySlot.cs" />
-    <Compile Include="Assets\Scripts\Towers\Tower.cs" />
-    <Compile Include="Assets\Scripts\Towers\TowerArcher.cs" />
+    <Compile Include="Assets\Scripts\AiController.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\EmpySlot.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Tower.cs" />
+    <Compile Include="Assets\Scripts\TowerArcher.cs" />
     <Compile Include="Assets\Scripts\UI\BuildUi.cs" />
+    <Compile Include="Assets\Scripts\WaveConfig.cs" />
     <None Include="Assets\Asset Packs\Packges\SimpleLowPolyNature\Readme.txt" />
     <None Include="Assets\Asset Packs\Packges\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
     <Reference Include="Unity.Timeline.Editor">
